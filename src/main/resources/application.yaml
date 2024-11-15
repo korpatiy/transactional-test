@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: transactional-test
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/isolation_test?currentSchema=public
+    username: crc
+    password: crc
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+logging:
+  level:
+    org.springframework.transaction: trace
+    org.springframework.transaction.support: trace
+    org.springframework.orm.jpa: debug
